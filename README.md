@@ -1,4 +1,4 @@
-# V-MRS
+# T-MRS
 
 This repository is official implementation of the paper 
 [Transformer based Language-Person Search with Multiple Region Slicing](https://www.researchgate.net/publication/350852675_Transformer_based_Language-Person_Search_with_Multiple_Region_Slicing/citation/download).
