@@ -3,8 +3,6 @@
 This repository is official implementation of the paper 
 [Transformer based Language-Person Search with Multiple Region Slicing](https://ieeexplore.ieee.org/document/9406055).
 
-Note: This is a preview version of the method. The dataset, settings and pre-trained model will be uploaded soon.
-
 ## Introduction
 
 Language-person search is an essential technique for applications like criminal searching, where it is more feasible for a witness to provide language descriptions of a suspect than providing a photo. Most existing works treat the language-person pair as a black-box, neither considering the inner structure in a person picture, nor the correlations between image regions and referring words.
