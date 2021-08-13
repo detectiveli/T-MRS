@@ -1,7 +1,7 @@
 # T-MRS
 
 This repository is official implementation of the paper 
-[Transformer based Language-Person Search with Multiple Region Slicing](https://www.researchgate.net/publication/350852675_Transformer_based_Language-Person_Search_with_Multiple_Region_Slicing/citation/download).
+[Transformer based Language-Person Search with Multiple Region Slicing](https://ieeexplore.ieee.org/document/9406055).
 
 Note: This is a preview version of the method. The dataset, settings and pre-trained model will be uploaded soon.
 
@@ -32,6 +32,9 @@ doi = {10.1109/TCSVT.2021.3073718}
 ## Prepare
 
 ### Environment
+I tested the environment on different devices, the settings might be a little different. For more details or bugs, you could reference :
+[VL-BERT](https://github.com/jackroos/VL-BERT)
+
 * Ubuntu 16.04, CUDA 9.0
 * Python 3.6.x
     ```bash
@@ -51,6 +54,7 @@ doi = {10.1109/TCSVT.2021.3073718}
     ```
 * Other requirements:
     ```bash
+    cd ./T-MRS/model #update 0813
     pip install -r requirements.txt
     ```
 * Compile
@@ -59,29 +63,36 @@ doi = {10.1109/TCSVT.2021.3073718}
     ```
 
 ### Data
+For CUHK-PEDES
+https://pan.baidu.com/s/1sOYAbETwHGAMe5yfx60q0Q key: 8kk1
 
-See [PREPARE_DATA.md](data/PREPARE_DATA.md).
+For PA100K
+https://pan.baidu.com/s/1K5p0xlvljBvKIhc3whrMTg key: 54q3
 
 ### Pre-trained Models
+Pre-trained Models for VL-BERT
+Download the pretrained of VL-BERT and put it under the ./T-MRS/pretrained_model
+See [PREPARE_PRETRAINED_MODELS.md](https://github.com/jackroos/VL-BERT/blob/master/model/pretrained_model/PREPARE_PRETRAINED_MODELS.md). #update 0813
 
-See [PREPARE_PRETRAINED_MODELS.md](/pretrained_model/PREPARE_PRETRAINED_MODELS.md).
+or from:
+https://pan.baidu.com/s/1jLqIIl9UAz-uKRmm2YLLnw key: r97u
+
+Pre-trained models for T-MRS (OS_small_11.model)
+https://pan.baidu.com/s/1yw0n31_gwszB-rRdU0QuyQ key: 7d58
 
 ## Training
 
 ### Non-Distributed Training
 ```
-python train_end2end.py --cfg ../cfgs/pedes/VS_small_6_F16.yaml --model-dir ./
+cd pedes #update 0813
+python train_end2end.py --cfg ../cfgs/pedes/OS_small_11.yaml --model-dir ./
 ```
 
 ## Evaluation
 
 ### Evaluation:
   ```
-  python test.py \
-  --split val \
-  --cfg ../cfgs/pedes/VS_small_6_F16.yaml \
-  --ckpt ../output/vl-bert_base_res101_pedes-0009.model \
-  --result-path ./ 
+  python test.py --split test --cfg ../cfgs/pedes/OS_small_11.yaml --ckpt [your directory]/OS_small_11.model --result-path ./
   ```
 
 ## Acknowledgements
