@@ -16,19 +16,6 @@ Without bells and whistles, we achieve the state-of-the-art performance on the C
 
 ![](./model/figs/example.png)
 
-## Citing V-MRS
-```bibtex
-@article{article,
-author = {Li, Hui and Xiao, Jimin and Sun, Mingjie and Lim, Eng and Zhao, Yao},
-year = {2021},
-month = {04},
-pages = {},
-title = {Transformer based Language-Person Search with Multiple Region Slicing},
-journal = {IEEE Transactions on Circuits and Systems for Video Technology},
-doi = {10.1109/TCSVT.2021.3073718}
-}
-```
-
 ## Prepare
 
 ### Environment
@@ -94,6 +81,19 @@ python train_end2end.py --cfg ../cfgs/pedes/OS_small_11.yaml --model-dir ./
   ```
   python test.py --split test --cfg ../cfgs/pedes/OS_small_11.yaml --ckpt [your directory]/OS_small_11.model --result-path ./
   ```
+  
+## Citing T-MRS
+```bibtex
+@article{article,
+author = {Li, Hui and Xiao, Jimin and Sun, Mingjie and Lim, Eng and Zhao, Yao},
+year = {2021},
+month = {04},
+pages = {},
+title = {Transformer based Language-Person Search with Multiple Region Slicing},
+journal = {IEEE Transactions on Circuits and Systems for Video Technology},
+doi = {10.1109/TCSVT.2021.3073718}
+}
+```
 
 ## Acknowledgements
 
